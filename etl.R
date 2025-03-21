@@ -2,6 +2,13 @@ library(readxl)
 library(tidyverse)
 
 
+##### Ideias para análises
+### Gráficos de sankey
+### PCA e cluster entre os diversos países e localizar o grupo do Brasil
+### Caracterizar o grupo do Brasil
+### Mapas mundi de variáveis selecionadas, principalmente as mais relevantes para o PCA
+
+
 
 esfera_sheet <- tibble(sheet=c("1.2","1.3","1.4","1.5"),
                         esfera = c("Governo Central","Governos Estaduais", "Governos Municipais", "Governo Geral"))
