@@ -2,6 +2,7 @@ library(readxl)
 library(tidyverse)
 
 
+
 esfera_sheet <- tibble(sheet=c("1.2","1.3","1.4","1.5"),
                         esfera = c("Governo Central","Governos Estaduais", "Governos Municipais", "Governo Geral"))
 
@@ -17,7 +18,16 @@ dados_cofog<-
       pivot_longer(3:16, names_to = "ano", values_to = "valor") %>%
       mutate(ano = as.numeric(ano)) %>%
       mutate(esfera = esfera) %>%
-      select(esfera, codigo:valor)
+      select(esfera, codigo:valor) %>%
+      mutate(descricao = str_remove(descricao, "\\d.*/$"))
   })
 
+
+
+
+# Example string
+input_string <- "Despesa total3/"
+
+# Remove the trailing pattern starting with a number and ending with /
+output_string <- str_remove(input_string, "\\d.*/$")
 
