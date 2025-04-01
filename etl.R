@@ -2,12 +2,13 @@ library(readxl)
 library(tidyverse)
 
 
+
 ##### Ideias para análises
 ### Gráficos de sankey
 ### PCA e cluster entre os diversos países e localizar o grupo do Brasil
 ### Caracterizar o grupo do Brasil
 ### Mapas mundi de variáveis selecionadas, principalmente as mais relevantes para o PCA
-
+### usar o pacote do R FMI para fazer o download dos dados
 
 
 esfera_sheet <- tibble(sheet=c("1.2","1.3","1.4","1.5"),
